@@ -47,7 +47,7 @@ fi
 
 # get install command for os
 case "$OS" in
-  "ubuntu" ) command="apt-get -y install"
+  "ubuntu" ) apt-get update;command="apt-get -y install"
 esac
 
 # install package

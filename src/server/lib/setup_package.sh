@@ -14,10 +14,16 @@ if [ -f $HOME/.zsh/zsh-syntax-highlighting ]; then
 fi
 
 # setting for git
-read -p "git config --global user.email: input email: " gm
-git config --global user.email $gm
-read -p "git config --global user.name: input name: " gn
-git config --global user.name $gn
+read -p "Setup git config?(Y/n): " gyn
+case "$gyn" in 
+  [yY]*)
+    read -p "git config --global user.email: input email: " gm
+    git config --global user.email $gm
+    read -p "git config --global user.name: input name: " gn
+    git config --global user.name $gn
+    ;;
+  *) echo "skip!!"
+esac
 
 # setting for vim
 cp ../../../.vimrc $HOME/.vimrc

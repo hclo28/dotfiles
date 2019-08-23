@@ -5,6 +5,9 @@ cd `dirname $0`
 # install package
 ./src/server/lib/install_package.sh -o ubuntu
 
+# setup
+src/server/lib/setup_package.sh
+
 ## setting for zsh
 #cp ./.zprofile $HOME/.zprofile
 #cp ./.zshrc $HOME/.zshrc

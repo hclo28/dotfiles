@@ -28,6 +28,13 @@ esac
 # setting for vim
 cp ../../../.vimrc $HOME/.vimrc
 cp -r ../../../.vim $HOME/.vim
+cp -r ../../../.dein.toml $HOME/.dein.toml
+mkdir -p ~/.vim/dein/repos/github.com/Shougo/dein.vim
+if [ -f $HOME/.vim/dein/repos/github.com/Shougo/dein.vim ]; then
+  git clone https://github.com/Shougo/dein.vim.git \
+    ~/.vim/dein/repos/github.com/Shougo/dein.vim
+fi
+
 #git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundle/neobundle.vim
 
 # setting for tmux

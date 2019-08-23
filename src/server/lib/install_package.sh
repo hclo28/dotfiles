@@ -55,7 +55,7 @@ while read package
 do
   if [[ ! $package =~ ^# ]] ; then
     echo "==========install $package=========="
-    $command $package
+    sudo $command $package
   fi
 done < ./package_list
 

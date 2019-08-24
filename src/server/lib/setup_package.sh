@@ -17,9 +17,11 @@ fi
 read -p "Setup git config?(Y/n): " gyn
 case "$gyn" in 
   [yY]*)
-    read -p "git config --global user.email: input email: " gm
+    read -p "git config --global user.email: input email(default: hclo28iq@gmail.com): " gm
+    if [ ${#gm} -eq 0 ];then gm='hclo28iq@gmail.com';fi
     git config --global user.email $gm
-    read -p "git config --global user.name: input name: " gn
+    read -p "git config --global user.name: input name(default: hclo28): " gn
+    if [ ${#gn} -eq 0 ];then gn='hclo28';fi
     git config --global user.name $gn
     ;;
   *) echo "skip!!"

@@ -7,9 +7,10 @@ chsh -s $(which zsh)
 ## copy config file
 cp ../../../.zprofile $HOME/.zprofile
 cp ../../../.zshrc $HOME/.zshrc
-cp -r ../../../.zsh $HOME/.zsh
-cp -r ../../../.config $HOME/.zsh
+cp -r ../../../.zsh $HOME
+cp -r ../../../.config $HOME
 if [ -f $HOME/.zsh/zsh-syntax-highlighting ]; then
+  echo "clone zsh-syntax-highlighting"
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.zsh/zsh-syntax-highlighting
 fi
 
@@ -29,19 +30,18 @@ esac
 
 # setting for vim
 cp ../../../.vimrc $HOME/.vimrc
-cp -r ../../../.vim $HOME/.vim
-cp -r ../../../.dein.toml $HOME/.dein.toml
-mkdir -p ~/.vim/dein/repos/github.com/Shougo/dein.vim
+cp -r ../../../.vim $HOME/
+cp ../../../.dein.toml $HOME/.dein.toml
 if [ -f $HOME/.vim/dein/repos/github.com/Shougo/dein.vim ]; then
+  echo "clone dein.vim"
+  mkdir -p ~/.vim/dein/repos/github.com/Shougo/dein.vim
   git clone https://github.com/Shougo/dein.vim.git \
     ~/.vim/dein/repos/github.com/Shougo/dein.vim
 fi
-
-#git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundle/neobundle.vim
 
 # setting for tmux
 cp ../../../.tmux.conf $HOME/.tmux.conf
 
 # setting for commands
-cp -r ../../../bin $HOME/bin
+cp -r ../../../bin $HOME
 

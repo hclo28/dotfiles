@@ -47,7 +47,8 @@ fi
 
 # get install command for os
 case "$OS" in
-  "ubuntu" ) apt-get update;command="apt-get -y install"
+  "ubuntu" ) sudo apt-get -y update;command="apt-get -y install" ;;
+  "linux" ) sudo yum -y update;command="yum -y install" ;;
 esac
 
 # install package

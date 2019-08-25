@@ -60,4 +60,3 @@ do
   fi
 done < ./package_list
 
-

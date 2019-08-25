@@ -5,7 +5,10 @@ cd `dirname $0`
 # install package
 read -p "Amazon Linux?(Y/n): " al
 case "$gyn" in
-  [yY]*) sudo amazon-linux-extras install -y epel ;;
+  [yY]*)
+    sudo amazon-linux-extras install -y epel 
+    sudo yum install -y util-linux-user
+    ;;
   *) sudo yum install -y epel-release ;;
 esac
 sudo yum-config-manager --enable epel

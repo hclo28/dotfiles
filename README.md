@@ -26,4 +26,6 @@ git --version
 ```
 After executing the above, execute Usage.
 
-
+# note
+If you use Vim 7.4, please use dein.vim ver.1.5 instead.
+https://github.com/Shougo/dein.vim/releases/tag/1.5

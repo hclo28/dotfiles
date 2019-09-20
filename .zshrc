@@ -46,7 +46,7 @@ git config --global color.ui true
 alias gcom='git commit -m'
 alias gadd='git add .'
 alias gb='git branch'
-alias gbda='git branch | grep -v 'develop' | grep -v 'master' | xargs git branch -D'
+alias gbdel='git branch | grep -v develop | grep -v "*" |grep -v master | xargs git branch -D'
 alias gba='git branch -a'
 alias gbr='git branch -r'
 alias gl='git log -3'

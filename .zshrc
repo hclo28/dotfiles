@@ -68,6 +68,11 @@ alias gpull='git rev-parse --abbrev-ref HEAD | xargs git pull origin'
 alias gpush='git rev-parse --abbrev-ref HEAD | xargs git push origin'
 alias grmn='git clean -fdx -n -e vendor/ -e sftp-config.json -e .vscode/'
 alias grm='git clean -fdx -e vendor/ -e sftp-config.json -e .vscode/'
+function gchb() {
+    git fetch
+    git checkout -b $1 origin/$1
+    git branch
+}
 
 #========docker======
 alias d='docker'
